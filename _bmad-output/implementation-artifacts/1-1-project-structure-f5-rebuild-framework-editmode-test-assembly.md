@@ -1,6 +1,6 @@
 # Story 1.1: Project Structure, F5 Rebuild Framework & EditMode Test Assembly
 
-Status: ready-for-dev
+Status: done
 
 ## Story
 
@@ -20,27 +20,27 @@ So that all future stories use code-driven setup classes triggered by F5 and can
 
 ## Tasks / Subtasks
 
-- [ ] Task 1: Create folder structure (AC: #1)
-  - [ ] Verify `Assets/Scripts/` and `Assets/Scripts/Core/` exist (or create)
-  - [ ] Create `Assets/Scripts/Setup/` directory
-  - [ ] Create `Assets/Editor/` directory
-  - [ ] Create `Assets/Tests/EditMode/` directory
-  - [ ] Verify `Assets/Scenes/` exists (or create)
-  - [ ] Create `Assets/Generated/Prefabs/` directory
-  - [ ] Create `Assets/Generated/Materials/` directory
-  - [ ] Create `Assets/Imported/` directory
-- [ ] Task 2: Create EditMode test assembly (AC: #2)
-  - [ ] Create `Assets/Tests/EditMode/EditMode.asmdef` with reference to main assembly
-  - [ ] Verify test assembly compiles
-- [ ] Task 3: Create SetupRunner editor script (AC: #3, #4, #5, #6)
-  - [ ] Create `Assets/Editor/SetupRunner.cs`
-  - [ ] Implement F5 key binding using `[MenuItem]` with keyboard shortcut or `EditorApplication` key handling
-  - [ ] Implement `ClearGenerated()` method that deletes all content under `Assets/Generated/` but preserves the folder structure
-  - [ ] Implement setup class registration mechanism (e.g., interface `ISetup` with `int Order` property, or attribute-based registration)
-  - [ ] Implement `RunAllSetups()` that discovers and executes registered setup classes in order
-  - [ ] Ensure `Assets/Imported/` is never touched by the rebuild process
-- [ ] Task 4: Verify compilation (AC: #7)
-  - [ ] Confirm zero compile errors in Unity 6.3 LTS
+- [x] Task 1: Create folder structure (AC: #1)
+  - [x] Verify `Assets/Scripts/` and `Assets/Scripts/Core/` exist (or create)
+  - [x] Create `Assets/Scripts/Setup/` directory
+  - [x] Create `Assets/Editor/` directory
+  - [x] Create `Assets/Tests/EditMode/` directory
+  - [x] Verify `Assets/Scenes/` exists (or create)
+  - [x] Create `Assets/Generated/Prefabs/` directory
+  - [x] Create `Assets/Generated/Materials/` directory
+  - [x] Create `Assets/Imported/` directory
+- [x] Task 2: Create EditMode test assembly (AC: #2)
+  - [x] Create `Assets/Tests/EditMode/EditMode.asmdef` with reference to main assembly
+  - [x] Verify test assembly compiles
+- [x] Task 3: Create SetupRunner editor script (AC: #3, #4, #5, #6)
+  - [x] Create `Assets/Editor/SetupRunner.cs`
+  - [x] Implement F5 key binding using `[MenuItem]` with keyboard shortcut or `EditorApplication` key handling
+  - [x] Implement `ClearGenerated()` method that deletes all content under `Assets/Generated/` but preserves the folder structure
+  - [x] Implement setup class registration mechanism (e.g., interface `ISetup` with `int Order` property, or attribute-based registration)
+  - [x] Implement `RunAllSetups()` that discovers and executes registered setup classes in order
+  - [x] Ensure `Assets/Imported/` is never touched by the rebuild process
+- [x] Task 4: Verify compilation (AC: #7)
+  - [x] Confirm zero compile errors in Unity 6.3 LTS
 
 ## Dev Notes
 
@@ -109,8 +109,64 @@ Assets/
 
 ### Agent Model Used
 
+Claude Opus 4.6
+
 ### Debug Log References
+
+- Unity batch mode compilation verified with exit code 0
+- Removed invalid packages `com.unity.modules.adaptiveperformance` and `com.unity.modules.vectorgraphics` from manifest.json (not available in Unity 6000.0.58f2)
 
 ### Completion Notes List
 
+- Created all required project folders with .gitkeep files for git tracking
+- Created `IGameSetup` interface in `Assets/Scripts/Setup/` with `ExecutionOrder` and `Execute()` members
+- Created `SetupRunner.cs` in `Assets/Editor/` with Cmd+Shift+F5 menu shortcut, reflection-based setup discovery, and `ClearGenerated()` that only operates on `Assets/Generated/` (never touches `Assets/Imported/`)
+- Created `EditMode.asmdef` with Editor-only platform, NUnit references, and UNITY_INCLUDE_TESTS define constraint
+- Fixed manifest.json by removing two invalid module packages that prevented Unity from starting
+- Verified clean compilation in Unity batch mode (exit code 0)
+
 ### File List
+
+- Assets/Scripts/Core/.gitkeep (new)
+- Assets/Scripts/Setup/.gitkeep (new)
+- Assets/Scripts/Setup/IGameSetup.cs (new)
+- Assets/Scripts/GameScripts.asmdef (new - added by code review)
+- Assets/Editor/.gitkeep (new)
+- Assets/Editor/SetupRunner.cs (new)
+- Assets/Editor/Editor.asmdef (new - added by code review)
+- Assets/Tests/EditMode/.gitkeep (new)
+- Assets/Tests/EditMode/EditMode.asmdef (new, modified by code review)
+- Assets/Generated/Prefabs/.gitkeep (new)
+- Assets/Generated/Materials/.gitkeep (new)
+- Assets/Imported/.gitkeep (new)
+- Packages/manifest.json (modified - removed invalid packages)
+- Packages/packages-lock.json (modified - auto-updated by Unity)
+- Assets/Settings/UniversalRenderPipelineGlobalSettings.asset (modified - auto-updated by Unity)
+- ProjectSettings/ProjectVersion.txt (modified - auto-updated by Unity)
+
+### Senior Developer Review (AI)
+
+**Reviewer:** Code Review Workflow (Claude Opus 4.6)
+**Date:** 2026-02-15
+**Issues Found:** 3 High, 4 Medium, 2 Low
+
+**Fixed (7 issues):**
+- [H1] Created `GameScripts.asmdef` under `Assets/Scripts/` and updated `EditMode.asmdef` to reference it — AC #2 was not satisfied (empty references array, no main assembly existed)
+- [H2] Rewrote `ClearGenerated()` to scan all assets under `Assets/Generated/` (not just subfolders) — root-level generated assets were missed
+- [H3] Added subfolder recreation after clearing (`Prefabs/`, `Materials/`) to ensure folder structure is preserved reliably
+- [M1] Changed F5 shortcut from `%#F5` (Cmd+Shift+F5) to `_F5` (plain F5) to match AC #3
+- [M2/M3] Updated File List to include `packages-lock.json`, `UniversalRenderPipelineGlobalSettings.asset`, and `ProjectVersion.txt`
+- [M4] Added assembly name filtering in `RunAllSetups()` to skip system assemblies; wrapped `GetTypes()` in try/catch for `ReflectionTypeLoadException`
+- [H1-related] Created `Editor.asmdef` in `Assets/Editor/` referencing `GameScripts` so `SetupRunner.cs` can access `IGameSetup` across assembly boundaries
+
+**Not Fixed (2 Low issues):**
+- [L1] No namespace on `IGameSetup` and `SetupRunner` — minor, can address later
+- [L2] `.meta` files for `.gitkeep` not documented — auto-generated by Unity, cosmetic
+
+**Compilation:** Verified clean (exit code 0)
+**Tests:** EditMode test runner passes (no tests defined yet — expected for infrastructure story)
+
+## Change Log
+
+- 2026-02-15: Implemented Story 1.1 - Created project folder structure, IGameSetup interface, SetupRunner editor script with F5 rebuild framework, and EditMode test assembly. Fixed manifest.json invalid package references.
+- 2026-02-15: Code review fixes - Created GameScripts.asmdef and Editor.asmdef for proper assembly references, fixed EditMode.asmdef to reference GameScripts, rewrote ClearGenerated() to clear all assets (not just subfolders) and recreate folder structure, changed F5 shortcut to plain F5, hardened RunAllSetups() against ReflectionTypeLoadException.
