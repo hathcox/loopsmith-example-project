@@ -1,6 +1,6 @@
 # Story 1.3: Player Setup — Cube with WASD Physics Movement
 
-Status: ready-for-dev
+Status: done
 
 ## Story
 
@@ -21,24 +21,24 @@ So that I can navigate the play area.
 
 ## Tasks / Subtasks
 
-- [ ] Task 1: Create PlayerController MonoBehaviour (AC: #6, #7, #8)
-  - [ ] Create `Assets/Scripts/PlayerController.cs`
-  - [ ] Read horizontal input via `Input.GetAxis("Horizontal")` and vertical via `Input.GetAxis("Vertical")`
-  - [ ] Apply movement force to Rigidbody in `FixedUpdate` using `AddForce` or direct velocity setting
-  - [ ] Define movement speed as a private constant (e.g., `private const float MoveSpeed = 10f;`)
-  - [ ] Cache Rigidbody reference in `Awake()` using `GetComponent<Rigidbody>()`
-  - [ ] Constrain Rigidbody rotation to prevent cube from tipping (freeze X and Z rotation)
-- [ ] Task 2: Create PlayerSetup class (AC: #1, #2, #3, #4, #5)
-  - [ ] Create `Assets/Scripts/Setup/PlayerSetup.cs` implementing `IGameSetup`
-  - [ ] Set `ExecutionOrder` after SceneSetup (e.g., order 200)
-  - [ ] Create player cube via `GameObject.CreatePrimitive(PrimitiveType.Cube)`
-  - [ ] Add and configure Rigidbody: non-kinematic, gravity enabled, freeze X/Z rotation
-  - [ ] Ensure BoxCollider is non-trigger (default)
-  - [ ] Attach PlayerController component via `AddComponent<PlayerController>()`
-  - [ ] Generate PlayerMaterial (URP Lit) into `Assets/Generated/Materials/`
-  - [ ] Apply PlayerMaterial to cube's MeshRenderer
-  - [ ] Set tag to "Player"
-  - [ ] Position cube on top of ground plane at center
+- [x] Task 1: Create PlayerController MonoBehaviour (AC: #6, #7, #8)
+  - [x] Create `Assets/Scripts/PlayerController.cs`
+  - [x] Read horizontal input via `Input.GetAxis("Horizontal")` and vertical via `Input.GetAxis("Vertical")`
+  - [x] Apply movement force to Rigidbody in `FixedUpdate` using `AddForce` or direct velocity setting
+  - [x] Define movement speed as a private constant (e.g., `private const float MoveSpeed = 10f;`)
+  - [x] Cache Rigidbody reference in `Awake()` using `GetComponent<Rigidbody>()`
+  - [x] Constrain Rigidbody rotation to prevent cube from tipping (freeze X and Z rotation)
+- [x] Task 2: Create PlayerSetup class (AC: #1, #2, #3, #4, #5)
+  - [x] Create `Assets/Scripts/Setup/PlayerSetup.cs` implementing `IGameSetup`
+  - [x] Set `ExecutionOrder` after SceneSetup (e.g., order 200)
+  - [x] Create player cube via `GameObject.CreatePrimitive(PrimitiveType.Cube)`
+  - [x] Add and configure Rigidbody: non-kinematic, gravity enabled, freeze X/Z rotation
+  - [x] Ensure BoxCollider is non-trigger (default)
+  - [x] Attach PlayerController component via `AddComponent<PlayerController>()`
+  - [x] Generate PlayerMaterial (URP Lit) into `Assets/Generated/Materials/`
+  - [x] Apply PlayerMaterial to cube's MeshRenderer
+  - [x] Set tag to "Player"
+  - [x] Position cube on top of ground plane at center
 
 ## Dev Notes
 
@@ -100,8 +100,45 @@ Assets/
 
 ### Agent Model Used
 
+Claude Opus 4.6
+
 ### Debug Log References
+
+- Unity batch mode compilation: SUCCESS (no errors, no warnings)
 
 ### Completion Notes List
 
+- **Task 1 — PlayerController:** Created thin MonoBehaviour at `Assets/Scripts/PlayerController.cs`. Reads horizontal/vertical input via `Input.GetAxis` in `FixedUpdate`, applies movement using `Rigidbody.velocity` for responsive control. Movement speed defined as `private const float MoveSpeed = 10f`. Rigidbody reference cached in `Awake()` with null-check guard. Diagonal movement normalized. Rotation constraints (freeze X/Z) are set in PlayerSetup.
+- **Task 2 — PlayerSetup:** Created `Assets/Scripts/Setup/PlayerSetup.cs` implementing `IGameSetup` with `ExecutionOrder = 200` (after SceneSetup at 100). Creates player cube via `CreatePrimitive`, configures Rigidbody (non-kinematic, gravity, freeze X/Z rotation), ensures BoxCollider non-trigger, attaches PlayerController, generates URP Lit PlayerMaterial (blue color) saved to `Assets/Generated/Materials/`, applies material, tags "Player", positions at (0, 0.5, 0).
+- **Testing:** Story Dev Notes specify no pure C# unit tests for this thin MonoBehaviour. Verification is via Unity compilation (passed) and Play mode WASD movement testing.
+
 ### File List
+
+- `Assets/Scripts/PlayerController.cs` — NEW
+- `Assets/Scripts/Setup/PlayerSetup.cs` — NEW
+- `Assets/Generated/Materials/PlayerMaterial.mat` — NEW (generated at editor time by PlayerSetup via F5 Rebuild)
+
+## Senior Developer Review (AI)
+
+**Reviewer:** Iggy (AI-assisted) on 2026-02-15
+**Issues Found:** 3 High, 4 Medium, 1 Low
+**Issues Fixed:** 6 (all HIGH and MEDIUM)
+
+### Fixed Issues
+
+1. **[HIGH] H1 — PlayerSetup missing directory safety check:** Added `EnsureMaterialDirectory()` to create `Assets/Generated/Materials/` if it doesn't exist before `AssetDatabase.CreateAsset`.
+2. **[HIGH] H2 — PlayerController null-check on Rigidbody:** Added null-check in `Awake()` with `Debug.LogError` and `enabled = false` guard.
+3. **[HIGH] H3 — AddForce causes sluggish movement:** Changed from `AddForce(movement * MoveSpeed)` to `Rigidbody.velocity` for direct, responsive control. Matches Dev Notes alternative pattern.
+4. **[MEDIUM] M1 — PlayerSetup doesn't save scene:** Added `EditorSceneManager.SaveOpenScenes()` after creating player cube.
+5. **[MEDIUM] M2 — Shader fallback uses wrong color property:** Added `isUrp` flag to use `_BaseColor` for URP Lit and `_Color` for Standard shader.
+6. **[MEDIUM] M3 — Story File List incorrect claim:** Changed "generated at runtime" to "generated at editor time" in File List.
+7. **[MEDIUM] M4 — Diagonal movement not normalized:** Added `sqrMagnitude > 1f` check with `Normalize()` to prevent 41% speed boost on diagonals.
+
+### Remaining Issues (LOW — no action required)
+
+1. **[LOW] L1 — `static readonly` for Color:** Reviewed and confirmed correct — C# `Color` struct cannot be `const`.
+
+## Change Log
+
+- 2026-02-15: Implemented Story 1.3 — Created PlayerController MonoBehaviour with WASD physics movement and PlayerSetup class for programmatic player cube creation
+- 2026-02-15: Code review fixes — null-check Rigidbody, normalize diagonal movement, switch to velocity-based movement, add directory safety check, fix shader fallback color property, save scene after setup
