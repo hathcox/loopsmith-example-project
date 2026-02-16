@@ -53,6 +53,6 @@ development_status:
   epic-2-retrospective: optional
 
   epic-3: in-progress
-  3-1-wincondition-core-logic: ready-for-dev
+  3-1-wincondition-core-logic: done
   3-2-ui-setup-score-display-win-message: ready-for-dev
   epic-3-retrospective: optional
