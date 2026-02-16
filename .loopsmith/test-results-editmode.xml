@@ -1,122 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<test-run id="2" testcasecount="26" result="Passed" total="26" passed="26" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.0529994">
-  <test-suite type="TestSuite" id="1000" name="Cube Collector" fullname="Cube Collector" runstate="Runnable" testcasecount="26" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.052999" total="26" passed="26" failed="0" inconclusive="0" skipped="0" asserts="0">
+<test-run id="2" testcasecount="26" result="Passed" total="26" passed="26" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.0625278">
+  <test-suite type="TestSuite" id="1000" name="Cube Collector" fullname="Cube Collector" runstate="Runnable" testcasecount="26" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.062528" total="26" passed="26" failed="0" inconclusive="0" skipped="0" asserts="0">
     <properties>
       <property name="platform" value="EditMode" />
     </properties>
-    <test-suite type="Assembly" id="1030" name="EditMode.dll" fullname="/Users/iggykrajci/Code/loopsmith-example-project/Library/ScriptAssemblies/EditMode.dll" runstate="Runnable" testcasecount="26" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.048585" total="26" passed="26" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <test-suite type="Assembly" id="1030" name="EditMode.dll" fullname="/Users/iggykrajci/Code/loopsmith-example-project/Library/ScriptAssemblies/EditMode.dll" runstate="Runnable" testcasecount="26" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.057254" total="26" passed="26" failed="0" inconclusive="0" skipped="0" asserts="0">
       <properties>
-        <property name="_PID" value="51431" />
+        <property name="_PID" value="55262" />
         <property name="_APPDOMAIN" value="Unity Child Domain" />
         <property name="platform" value="EditMode" />
         <property name="EditorOnly" value="True" />
       </properties>
-      <test-suite type="TestSuite" id="1031" name="CubeCollector" fullname="CubeCollector" runstate="Runnable" testcasecount="17" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.022802" total="17" passed="17" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <test-suite type="TestSuite" id="1031" name="CubeCollector" fullname="CubeCollector" runstate="Runnable" testcasecount="17" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.028329" total="17" passed="17" failed="0" inconclusive="0" skipped="0" asserts="0">
         <properties />
-        <test-suite type="TestSuite" id="1032" name="Tests" fullname="CubeCollector.Tests" runstate="Runnable" testcasecount="17" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.022459" total="17" passed="17" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <test-suite type="TestSuite" id="1032" name="Tests" fullname="CubeCollector.Tests" runstate="Runnable" testcasecount="17" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.027601" total="17" passed="17" failed="0" inconclusive="0" skipped="0" asserts="0">
           <properties />
-          <test-suite type="TestFixture" id="1011" name="ScoreTrackerTests" fullname="CubeCollector.Tests.ScoreTrackerTests" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.019050" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-suite type="TestFixture" id="1011" name="ScoreTrackerTests" fullname="CubeCollector.Tests.ScoreTrackerTests" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.023690" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
             <properties />
-            <test-case id="1018" name="AddPoint_CalledThreeTimes_CollectedEqualsThree" fullname="CubeCollector.Tests.ScoreTrackerTests.AddPoint_CalledThreeTimes_CollectedEqualsThree" methodname="AddPoint_CalledThreeTimes_CollectedEqualsThree" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="1476887561" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.007659" asserts="0">
+            <test-case id="1018" name="AddPoint_CalledThreeTimes_CollectedEqualsThree" fullname="CubeCollector.Tests.ScoreTrackerTests.AddPoint_CalledThreeTimes_CollectedEqualsThree" methodname="AddPoint_CalledThreeTimes_CollectedEqualsThree" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="1667436064" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.008268" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1019" name="AddPoint_CalledThreeTimes_EventFiredExactlyThreeTimes" fullname="CubeCollector.Tests.ScoreTrackerTests.AddPoint_CalledThreeTimes_EventFiredExactlyThreeTimes" methodname="AddPoint_CalledThreeTimes_EventFiredExactlyThreeTimes" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="1238761294" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.000202" asserts="0">
+            <test-case id="1019" name="AddPoint_CalledThreeTimes_EventFiredExactlyThreeTimes" fullname="CubeCollector.Tests.ScoreTrackerTests.AddPoint_CalledThreeTimes_EventFiredExactlyThreeTimes" methodname="AddPoint_CalledThreeTimes_EventFiredExactlyThreeTimes" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="929243128" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.000265" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1017" name="AddPoint_WhenCalled_FiresOnScoreChangedEvent" fullname="CubeCollector.Tests.ScoreTrackerTests.AddPoint_WhenCalled_FiresOnScoreChangedEvent" methodname="AddPoint_WhenCalled_FiresOnScoreChangedEvent" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="1793429073" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.000112" asserts="0">
+            <test-case id="1017" name="AddPoint_WhenCalled_FiresOnScoreChangedEvent" fullname="CubeCollector.Tests.ScoreTrackerTests.AddPoint_WhenCalled_FiresOnScoreChangedEvent" methodname="AddPoint_WhenCalled_FiresOnScoreChangedEvent" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="1204737736" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.000142" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1016" name="AddPoint_WhenCalled_IncrementsCollectedCount" fullname="CubeCollector.Tests.ScoreTrackerTests.AddPoint_WhenCalled_IncrementsCollectedCount" methodname="AddPoint_WhenCalled_IncrementsCollectedCount" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="786452826" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.000066" asserts="0">
+            <test-case id="1016" name="AddPoint_WhenCalled_IncrementsCollectedCount" fullname="CubeCollector.Tests.ScoreTrackerTests.AddPoint_WhenCalled_IncrementsCollectedCount" methodname="AddPoint_WhenCalled_IncrementsCollectedCount" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="1996018700" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.000087" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1021" name="AddPoint_WhenCollectedEqualsTotal_DoesNotFireEvent" fullname="CubeCollector.Tests.ScoreTrackerTests.AddPoint_WhenCollectedEqualsTotal_DoesNotFireEvent" methodname="AddPoint_WhenCollectedEqualsTotal_DoesNotFireEvent" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="1606325162" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.000140" asserts="0">
+            <test-case id="1021" name="AddPoint_WhenCollectedEqualsTotal_DoesNotFireEvent" fullname="CubeCollector.Tests.ScoreTrackerTests.AddPoint_WhenCollectedEqualsTotal_DoesNotFireEvent" methodname="AddPoint_WhenCollectedEqualsTotal_DoesNotFireEvent" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="1772264651" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.000147" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1020" name="AddPoint_WhenCollectedEqualsTotal_DoesNotIncrement" fullname="CubeCollector.Tests.ScoreTrackerTests.AddPoint_WhenCollectedEqualsTotal_DoesNotIncrement" methodname="AddPoint_WhenCollectedEqualsTotal_DoesNotIncrement" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="1704966059" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.000084" asserts="0">
+            <test-case id="1020" name="AddPoint_WhenCollectedEqualsTotal_DoesNotIncrement" fullname="CubeCollector.Tests.ScoreTrackerTests.AddPoint_WhenCollectedEqualsTotal_DoesNotIncrement" methodname="AddPoint_WhenCollectedEqualsTotal_DoesNotIncrement" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="256873113" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.000106" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1012" name="Constructor_WhenInitialized_CollectedIsZero" fullname="CubeCollector.Tests.ScoreTrackerTests.Constructor_WhenInitialized_CollectedIsZero" methodname="Constructor_WhenInitialized_CollectedIsZero" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="1051700049" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.000067" asserts="0">
+            <test-case id="1012" name="Constructor_WhenInitialized_CollectedIsZero" fullname="CubeCollector.Tests.ScoreTrackerTests.Constructor_WhenInitialized_CollectedIsZero" methodname="Constructor_WhenInitialized_CollectedIsZero" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="638709999" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.000093" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1015" name="Constructor_WithNegativeTotal_ThrowsArgumentOutOfRangeException" fullname="CubeCollector.Tests.ScoreTrackerTests.Constructor_WithNegativeTotal_ThrowsArgumentOutOfRangeException" methodname="Constructor_WithNegativeTotal_ThrowsArgumentOutOfRangeException" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="864983833" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.001605" asserts="0">
+            <test-case id="1015" name="Constructor_WithNegativeTotal_ThrowsArgumentOutOfRangeException" fullname="CubeCollector.Tests.ScoreTrackerTests.Constructor_WithNegativeTotal_ThrowsArgumentOutOfRangeException" methodname="Constructor_WithNegativeTotal_ThrowsArgumentOutOfRangeException" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="1853093285" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.001697" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1013" name="Constructor_WithTotalFive_TotalEqualsFive" fullname="CubeCollector.Tests.ScoreTrackerTests.Constructor_WithTotalFive_TotalEqualsFive" methodname="Constructor_WithTotalFive_TotalEqualsFive" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="10412145" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.000082" asserts="0">
+            <test-case id="1013" name="Constructor_WithTotalFive_TotalEqualsFive" fullname="CubeCollector.Tests.ScoreTrackerTests.Constructor_WithTotalFive_TotalEqualsFive" methodname="Constructor_WithTotalFive_TotalEqualsFive" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="148171908" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.000099" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1014" name="Constructor_WithZeroTotal_ThrowsArgumentOutOfRangeException" fullname="CubeCollector.Tests.ScoreTrackerTests.Constructor_WithZeroTotal_ThrowsArgumentOutOfRangeException" methodname="Constructor_WithZeroTotal_ThrowsArgumentOutOfRangeException" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="1900331795" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.000098" asserts="0">
+            <test-case id="1014" name="Constructor_WithZeroTotal_ThrowsArgumentOutOfRangeException" fullname="CubeCollector.Tests.ScoreTrackerTests.Constructor_WithZeroTotal_ThrowsArgumentOutOfRangeException" methodname="Constructor_WithZeroTotal_ThrowsArgumentOutOfRangeException" classname="CubeCollector.Tests.ScoreTrackerTests" runstate="Runnable" seed="883122713" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.000128" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
           </test-suite>
-          <test-suite type="TestFixture" id="1022" name="WinConditionTests" fullname="CubeCollector.Tests.WinConditionTests" classname="CubeCollector.Tests.WinConditionTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.002444" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-suite type="TestFixture" id="1022" name="WinConditionTests" fullname="CubeCollector.Tests.WinConditionTests" classname="CubeCollector.Tests.WinConditionTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.002480" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
             <properties />
-            <test-case id="1024" name="CheckWin_CollectedEqualsTotal_ReturnsTrue" fullname="CubeCollector.Tests.WinConditionTests.CheckWin_CollectedEqualsTotal_ReturnsTrue" methodname="CheckWin_CollectedEqualsTotal_ReturnsTrue" classname="CubeCollector.Tests.WinConditionTests" runstate="Runnable" seed="1078883904" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.000245" asserts="0">
+            <test-case id="1024" name="CheckWin_CollectedEqualsTotal_ReturnsTrue" fullname="CubeCollector.Tests.WinConditionTests.CheckWin_CollectedEqualsTotal_ReturnsTrue" methodname="CheckWin_CollectedEqualsTotal_ReturnsTrue" classname="CubeCollector.Tests.WinConditionTests" runstate="Runnable" seed="1543128244" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.000278" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1026" name="CheckWin_CollectedGreaterThanTotal_ReturnsTrue" fullname="CubeCollector.Tests.WinConditionTests.CheckWin_CollectedGreaterThanTotal_ReturnsTrue" methodname="CheckWin_CollectedGreaterThanTotal_ReturnsTrue" classname="CubeCollector.Tests.WinConditionTests" runstate="Runnable" seed="433315341" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.000060" asserts="0">
+            <test-case id="1026" name="CheckWin_CollectedGreaterThanTotal_ReturnsTrue" fullname="CubeCollector.Tests.WinConditionTests.CheckWin_CollectedGreaterThanTotal_ReturnsTrue" methodname="CheckWin_CollectedGreaterThanTotal_ReturnsTrue" classname="CubeCollector.Tests.WinConditionTests" runstate="Runnable" seed="783845405" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.000071" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1023" name="CheckWin_CollectedLessThanTotal_ReturnsFalse" fullname="CubeCollector.Tests.WinConditionTests.CheckWin_CollectedLessThanTotal_ReturnsFalse" methodname="CheckWin_CollectedLessThanTotal_ReturnsFalse" classname="CubeCollector.Tests.WinConditionTests" runstate="Runnable" seed="79788930" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.000181" asserts="0">
+            <test-case id="1023" name="CheckWin_CollectedLessThanTotal_ReturnsFalse" fullname="CubeCollector.Tests.WinConditionTests.CheckWin_CollectedLessThanTotal_ReturnsFalse" methodname="CheckWin_CollectedLessThanTotal_ReturnsFalse" classname="CubeCollector.Tests.WinConditionTests" runstate="Runnable" seed="1763616500" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.000133" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1025" name="CheckWin_CollectedZero_ReturnsFalse" fullname="CubeCollector.Tests.WinConditionTests.CheckWin_CollectedZero_ReturnsFalse" methodname="CheckWin_CollectedZero_ReturnsFalse" classname="CubeCollector.Tests.WinConditionTests" runstate="Runnable" seed="1588664619" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.000085" asserts="0">
+            <test-case id="1025" name="CheckWin_CollectedZero_ReturnsFalse" fullname="CubeCollector.Tests.WinConditionTests.CheckWin_CollectedZero_ReturnsFalse" methodname="CheckWin_CollectedZero_ReturnsFalse" classname="CubeCollector.Tests.WinConditionTests" runstate="Runnable" seed="1263592196" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.000071" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1029" name="CheckWin_WithScoreTracker_WinConditionEvaluatesCorrectly" fullname="CubeCollector.Tests.WinConditionTests.CheckWin_WithScoreTracker_WinConditionEvaluatesCorrectly" methodname="CheckWin_WithScoreTracker_WinConditionEvaluatesCorrectly" classname="CubeCollector.Tests.WinConditionTests" runstate="Runnable" seed="523078509" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.000098" asserts="0">
+            <test-case id="1029" name="CheckWin_WithScoreTracker_WinConditionEvaluatesCorrectly" fullname="CubeCollector.Tests.WinConditionTests.CheckWin_WithScoreTracker_WinConditionEvaluatesCorrectly" methodname="CheckWin_WithScoreTracker_WinConditionEvaluatesCorrectly" classname="CubeCollector.Tests.WinConditionTests" runstate="Runnable" seed="2081744433" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.000101" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1028" name="Constructor_NegativeTotalCount_ThrowsArgumentOutOfRangeException" fullname="CubeCollector.Tests.WinConditionTests.Constructor_NegativeTotalCount_ThrowsArgumentOutOfRangeException" methodname="Constructor_NegativeTotalCount_ThrowsArgumentOutOfRangeException" classname="CubeCollector.Tests.WinConditionTests" runstate="Runnable" seed="1544374381" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.000164" asserts="0">
+            <test-case id="1028" name="Constructor_NegativeTotalCount_ThrowsArgumentOutOfRangeException" fullname="CubeCollector.Tests.WinConditionTests.Constructor_NegativeTotalCount_ThrowsArgumentOutOfRangeException" methodname="Constructor_NegativeTotalCount_ThrowsArgumentOutOfRangeException" classname="CubeCollector.Tests.WinConditionTests" runstate="Runnable" seed="390668344" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.000156" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
               </properties>
             </test-case>
-            <test-case id="1027" name="Constructor_ZeroTotalCount_ThrowsArgumentOutOfRangeException" fullname="CubeCollector.Tests.WinConditionTests.Constructor_ZeroTotalCount_ThrowsArgumentOutOfRangeException" methodname="Constructor_ZeroTotalCount_ThrowsArgumentOutOfRangeException" classname="CubeCollector.Tests.WinConditionTests" runstate="Runnable" seed="1489681861" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.000104" asserts="0">
+            <test-case id="1027" name="Constructor_ZeroTotalCount_ThrowsArgumentOutOfRangeException" fullname="CubeCollector.Tests.WinConditionTests.Constructor_ZeroTotalCount_ThrowsArgumentOutOfRangeException" methodname="Constructor_ZeroTotalCount_ThrowsArgumentOutOfRangeException" classname="CubeCollector.Tests.WinConditionTests" runstate="Runnable" seed="1523097489" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.000091" asserts="0">
               <properties>
                 <property name="retryIteration" value="0" />
                 <property name="repeatIteration" value="0" />
@@ -125,9 +125,9 @@
           </test-suite>
         </test-suite>
       </test-suite>
-      <test-suite type="TestFixture" id="1001" name="SceneSetupBoundaryTests" fullname="SceneSetupBoundaryTests" classname="SceneSetupBoundaryTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.025125" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <test-suite type="TestFixture" id="1001" name="SceneSetupBoundaryTests" fullname="SceneSetupBoundaryTests" classname="SceneSetupBoundaryTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.027883" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
         <properties />
-        <test-case id="1002" name="CreateBoundaries_WhenCalled_CreatesBoundariesParentWith4Children" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_CreatesBoundariesParentWith4Children" methodname="CreateBoundaries_WhenCalled_CreatesBoundariesParentWith4Children" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="241319684" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.006490" asserts="0">
+        <test-case id="1002" name="CreateBoundaries_WhenCalled_CreatesBoundariesParentWith4Children" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_CreatesBoundariesParentWith4Children" methodname="CreateBoundaries_WhenCalled_CreatesBoundariesParentWith4Children" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="651866175" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.006909" asserts="0">
           <properties>
             <property name="retryIteration" value="0" />
             <property name="repeatIteration" value="0" />
@@ -139,7 +139,7 @@
 [SceneSetup] Created play area boundaries.
 ]]></output>
         </test-case>
-        <test-case id="1003" name="CreateBoundaries_WhenCalled_CreatesWallsWithCorrectNames" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_CreatesWallsWithCorrectNames" methodname="CreateBoundaries_WhenCalled_CreatesWallsWithCorrectNames" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="1578293241" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.001857" asserts="0">
+        <test-case id="1003" name="CreateBoundaries_WhenCalled_CreatesWallsWithCorrectNames" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_CreatesWallsWithCorrectNames" methodname="CreateBoundaries_WhenCalled_CreatesWallsWithCorrectNames" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="882328758" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.002058" asserts="0">
           <properties>
             <property name="retryIteration" value="0" />
             <property name="repeatIteration" value="0" />
@@ -151,7 +151,7 @@
 [SceneSetup] Created play area boundaries.
 ]]></output>
         </test-case>
-        <test-case id="1009" name="CreateBoundaries_WhenCalled_EastWallPositionedCorrectly" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_EastWallPositionedCorrectly" methodname="CreateBoundaries_WhenCalled_EastWallPositionedCorrectly" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="346331844" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.003278" asserts="0">
+        <test-case id="1009" name="CreateBoundaries_WhenCalled_EastWallPositionedCorrectly" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_EastWallPositionedCorrectly" methodname="CreateBoundaries_WhenCalled_EastWallPositionedCorrectly" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="1368652166" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.003592" asserts="0">
           <properties>
             <property name="retryIteration" value="0" />
             <property name="repeatIteration" value="0" />
@@ -163,7 +163,7 @@
 [SceneSetup] Created play area boundaries.
 ]]></output>
         </test-case>
-        <test-case id="1007" name="CreateBoundaries_WhenCalled_NorthWallPositionedCorrectly" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_NorthWallPositionedCorrectly" methodname="CreateBoundaries_WhenCalled_NorthWallPositionedCorrectly" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="1981715454" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.001843" asserts="0">
+        <test-case id="1007" name="CreateBoundaries_WhenCalled_NorthWallPositionedCorrectly" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_NorthWallPositionedCorrectly" methodname="CreateBoundaries_WhenCalled_NorthWallPositionedCorrectly" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="1085043229" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.002109" asserts="0">
           <properties>
             <property name="retryIteration" value="0" />
             <property name="repeatIteration" value="0" />
@@ -175,7 +175,7 @@
 [SceneSetup] Created play area boundaries.
 ]]></output>
         </test-case>
-        <test-case id="1008" name="CreateBoundaries_WhenCalled_SouthWallPositionedCorrectly" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_SouthWallPositionedCorrectly" methodname="CreateBoundaries_WhenCalled_SouthWallPositionedCorrectly" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="478838518" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.001758" asserts="0">
+        <test-case id="1008" name="CreateBoundaries_WhenCalled_SouthWallPositionedCorrectly" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_SouthWallPositionedCorrectly" methodname="CreateBoundaries_WhenCalled_SouthWallPositionedCorrectly" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="132147793" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.001911" asserts="0">
           <properties>
             <property name="retryIteration" value="0" />
             <property name="repeatIteration" value="0" />
@@ -187,7 +187,7 @@
 [SceneSetup] Created play area boundaries.
 ]]></output>
         </test-case>
-        <test-case id="1005" name="CreateBoundaries_WhenCalled_WallsAreStatic" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_WallsAreStatic" methodname="CreateBoundaries_WhenCalled_WallsAreStatic" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="1828850356" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.001893" asserts="0">
+        <test-case id="1005" name="CreateBoundaries_WhenCalled_WallsAreStatic" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_WallsAreStatic" methodname="CreateBoundaries_WhenCalled_WallsAreStatic" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="906458338" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.002067" asserts="0">
           <properties>
             <property name="retryIteration" value="0" />
             <property name="repeatIteration" value="0" />
@@ -199,7 +199,7 @@
 [SceneSetup] Created play area boundaries.
 ]]></output>
         </test-case>
-        <test-case id="1004" name="CreateBoundaries_WhenCalled_WallsHaveNonTriggerBoxColliders" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_WallsHaveNonTriggerBoxColliders" methodname="CreateBoundaries_WhenCalled_WallsHaveNonTriggerBoxColliders" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="1767721291" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.001998" asserts="0">
+        <test-case id="1004" name="CreateBoundaries_WhenCalled_WallsHaveNonTriggerBoxColliders" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_WallsHaveNonTriggerBoxColliders" methodname="CreateBoundaries_WhenCalled_WallsHaveNonTriggerBoxColliders" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="1739849864" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.002206" asserts="0">
           <properties>
             <property name="retryIteration" value="0" />
             <property name="repeatIteration" value="0" />
@@ -211,7 +211,7 @@
 [SceneSetup] Created play area boundaries.
 ]]></output>
         </test-case>
-        <test-case id="1006" name="CreateBoundaries_WhenCalled_WallsHaveNoRendererOrMeshFilter" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_WallsHaveNoRendererOrMeshFilter" methodname="CreateBoundaries_WhenCalled_WallsHaveNoRendererOrMeshFilter" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="846302151" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.001904" asserts="0">
+        <test-case id="1006" name="CreateBoundaries_WhenCalled_WallsHaveNoRendererOrMeshFilter" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_WallsHaveNoRendererOrMeshFilter" methodname="CreateBoundaries_WhenCalled_WallsHaveNoRendererOrMeshFilter" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="395073648" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.002263" asserts="0">
           <properties>
             <property name="retryIteration" value="0" />
             <property name="repeatIteration" value="0" />
@@ -223,7 +223,7 @@
 [SceneSetup] Created play area boundaries.
 ]]></output>
         </test-case>
-        <test-case id="1010" name="CreateBoundaries_WhenCalled_WestWallPositionedCorrectly" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_WestWallPositionedCorrectly" methodname="CreateBoundaries_WhenCalled_WestWallPositionedCorrectly" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="1253271704" result="Passed" start-time="2026-02-16 03:29:57Z" end-time="2026-02-16 03:29:57Z" duration="0.001850" asserts="0">
+        <test-case id="1010" name="CreateBoundaries_WhenCalled_WestWallPositionedCorrectly" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_WestWallPositionedCorrectly" methodname="CreateBoundaries_WhenCalled_WestWallPositionedCorrectly" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="133953736" result="Passed" start-time="2026-02-16 03:40:17Z" end-time="2026-02-16 03:40:17Z" duration="0.001931" asserts="0">
           <properties>
             <property name="retryIteration" value="0" />
             <property name="repeatIteration" value="0" />
