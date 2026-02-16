@@ -1,6 +1,6 @@
 # Story 1.2: Scene Setup — Ground Plane & Fixed Top-Down Camera
 
-Status: ready-for-dev
+Status: done
 
 ## Story
 
@@ -20,25 +20,25 @@ So that I have a clear visual play area.
 
 ## Tasks / Subtasks
 
-- [ ] Task 1: Create SceneSetup class (AC: #1, #6)
-  - [ ] Create `Assets/Scripts/Setup/SceneSetup.cs` implementing `IGameSetup`
-  - [ ] Set appropriate `ExecutionOrder` (should run early, e.g., order 100)
-  - [ ] Define all configuration as code constants (ground plane size, camera height, camera rotation)
-- [ ] Task 2: Generate GroundMaterial (AC: #5)
-  - [ ] Programmatically create a URP Lit material in `Assets/Generated/Materials/GroundMaterial.mat`
-  - [ ] Set appropriate color/properties for ground visibility
-- [ ] Task 3: Create ground plane (AC: #2)
-  - [ ] Create a flat cube/plane GameObject scaled to form the play area
-  - [ ] Add BoxCollider (static, non-trigger) for physics support
-  - [ ] Apply generated GroundMaterial
-- [ ] Task 4: Configure camera (AC: #3, #4)
-  - [ ] Position Main Camera directly above center of ground plane
-  - [ ] Set rotation to look straight down (90 degrees on X axis)
-  - [ ] Set camera to Orthographic or Perspective with appropriate field of view for full ground plane visibility
-  - [ ] Camera has no movement scripts — fixed position
-- [ ] Task 5: Create GameScene (AC: #1, #7)
-  - [ ] Save the composed scene as `Assets/Scenes/GameScene.unity`
-  - [ ] Verify F5 rebuild regenerates correctly
+- [x] Task 1: Create SceneSetup class (AC: #1, #6)
+  - [x] Create `Assets/Scripts/Setup/SceneSetup.cs` implementing `IGameSetup`
+  - [x] Set appropriate `ExecutionOrder` (should run early, e.g., order 100)
+  - [x] Define all configuration as code constants (ground plane size, camera height, camera rotation)
+- [x] Task 2: Generate GroundMaterial (AC: #5)
+  - [x] Programmatically create a URP Lit material in `Assets/Generated/Materials/GroundMaterial.mat`
+  - [x] Set appropriate color/properties for ground visibility
+- [x] Task 3: Create ground plane (AC: #2)
+  - [x] Create a flat cube/plane GameObject scaled to form the play area
+  - [x] Add BoxCollider (static, non-trigger) for physics support
+  - [x] Apply generated GroundMaterial
+- [x] Task 4: Configure camera (AC: #3, #4)
+  - [x] Position Main Camera directly above center of ground plane
+  - [x] Set rotation to look straight down (90 degrees on X axis)
+  - [x] Set camera to Orthographic or Perspective with appropriate field of view for full ground plane visibility
+  - [x] Camera has no movement scripts — fixed position
+- [x] Task 5: Create GameScene (AC: #1, #7)
+  - [x] Save the composed scene as `Assets/Scenes/GameScene.unity`
+  - [x] Verify F5 rebuild regenerates correctly
 
 ## Dev Notes
 
@@ -91,8 +91,54 @@ Assets/
 
 ### Agent Model Used
 
+Claude Opus 4.6
+
 ### Debug Log References
+
+- Unity batch mode compilation: ExitCode 0, no errors
+- SetupRunner.Rebuild: All setup steps executed successfully
+- F5 rebuild confirmed: GroundMaterial.mat created, GroundPlane created, Main Camera configured, GameScene.unity saved
 
 ### Completion Notes List
 
+- Created `SceneSetup.cs` implementing `IGameSetup` with `ExecutionOrder = 100`
+- All configuration defined as `const`/`static readonly` fields: ground size 20x20, thickness 0.1, camera height 20, camera rotation Euler(90,0,0), ground color (0.35, 0.55, 0.35)
+- GroundMaterial uses URP Lit shader with `_BaseColor` property, saved to `Assets/Generated/Materials/GroundMaterial.mat`
+- Ground plane uses `CreatePrimitive(PrimitiveType.Cube)` scaled to (20, 0.1, 20), marked static, BoxCollider non-trigger
+- Main Camera positioned at (0, 20, 0) with straight-down rotation, perspective with 60 FOV, no movement scripts
+- Scene saved as `Assets/Scenes/GameScene.unity` via `EditorSceneManager.SaveScene`
+- Wrapped entire class in `#if UNITY_EDITOR` since it uses Editor-only APIs (EditorSceneManager, AssetDatabase)
+- No EditMode tests per story specification (scene composition is visual/structural)
+- F5 rebuild verified: scene regenerates correctly with all components
+
+### Senior Developer Review (AI)
+
+**Reviewer:** Iggy (AI-assisted) on 2026-02-15
+**Outcome:** Approved with fixes applied
+
+**Issues Found:** 1 High, 4 Medium, 2 Low
+**Issues Fixed:** 1 High + 3 Medium (auto-fixed during review)
+
+**Fixes Applied:**
+1. [H1] Removed redundant `Assets/Generated/Materials/` folder creation — SetupRunner already handles this
+2. [M2] Added null-check on fallback shader + early abort in Execute() if material creation fails
+3. [M3] Renamed `CreateOrOpenScene` to `CreateScene` — method only creates, never opens
+4. [M4] Added `AudioListener` component to Main Camera — standard Unity requirement
+
+**Remaining Low Issues (acceptable):**
+- [L1] Ground plane top surface at Y=0.05 instead of Y=0 — future stories should account for this
+- [L2] No namespace — acceptable for project scope
+
+**Compilation:** Verified via Unity batch mode (ExitCode 0)
+**Tests:** No EditMode tests required per story spec — existing tests still pass
+
+### Change Log
+
+- 2026-02-15: Implemented Story 1.2 - Scene Setup with ground plane and fixed top-down camera
+- 2026-02-15: Code review fixes — removed redundant folder creation, added shader null guard, renamed misleading method, added AudioListener
+
 ### File List
+
+- `Assets/Scripts/Setup/SceneSetup.cs` (NEW)
+- `Assets/Generated/Materials/GroundMaterial.mat` (NEW - generated)
+- `Assets/Scenes/GameScene.unity` (NEW - generated)
