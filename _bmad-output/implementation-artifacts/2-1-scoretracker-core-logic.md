@@ -1,6 +1,6 @@
 # Story 2.1: ScoreTracker Core Logic
 
-Status: ready-for-dev
+Status: done
 
 ## Story
 
@@ -20,23 +20,23 @@ So that score state is testable via EditMode tests and decoupled from MonoBehavi
 
 ## Tasks / Subtasks
 
-- [ ] Task 1: Create ScoreTracker class (AC: #1, #2, #4, #5)
-  - [ ] Create `Assets/Scripts/Core/ScoreTracker.cs`
-  - [ ] Constructor accepts `int totalCount` parameter
-  - [ ] Implement `public int Collected { get; private set; }` property
-  - [ ] Implement `public int Total { get; }` property (set in constructor)
-  - [ ] Implement `public event Action<int> OnScoreChanged;`
-  - [ ] Implement `public void AddPoint()` method that increments `Collected` and fires `OnScoreChanged?.Invoke(Collected)`
-- [ ] Task 2: Create ScoreTrackerTests (AC: #3, #6, #7)
-  - [ ] Create `Assets/Tests/EditMode/ScoreTrackerTests.cs`
-  - [ ] Test: `AddPoint_WhenCalled_IncrementsCollectedCount`
-  - [ ] Test: `AddPoint_WhenCalled_FiresOnScoreChangedEvent`
-  - [ ] Test: `AddPoint_CalledThreeTimes_CollectedEqualsThree`
-  - [ ] Test: `AddPoint_CalledThreeTimes_EventFiredExactlyThreeTimes`
-  - [ ] Test: `Constructor_WhenInitialized_CollectedIsZero`
-  - [ ] Test: `Constructor_WithTotalFive_TotalEqualsFive`
-  - [ ] Use NUnit `[Test]` attribute, `Assert.AreEqual`, `Assert.IsTrue`
-  - [ ] Instantiate ScoreTracker with `new ScoreTracker(5)` — no MonoBehaviour needed
+- [x] Task 1: Create ScoreTracker class (AC: #1, #2, #4, #5)
+  - [x] Create `Assets/Scripts/Core/ScoreTracker.cs`
+  - [x] Constructor accepts `int totalCount` parameter
+  - [x] Implement `public int Collected { get; private set; }` property
+  - [x] Implement `public int Total { get; }` property (set in constructor)
+  - [x] Implement `public event Action<int> OnScoreChanged;`
+  - [x] Implement `public void AddPoint()` method that increments `Collected` and fires `OnScoreChanged?.Invoke(Collected)`
+- [x] Task 2: Create ScoreTrackerTests (AC: #3, #6, #7)
+  - [x] Create `Assets/Tests/EditMode/ScoreTrackerTests.cs`
+  - [x] Test: `AddPoint_WhenCalled_IncrementsCollectedCount`
+  - [x] Test: `AddPoint_WhenCalled_FiresOnScoreChangedEvent`
+  - [x] Test: `AddPoint_CalledThreeTimes_CollectedEqualsThree`
+  - [x] Test: `AddPoint_CalledThreeTimes_EventFiredExactlyThreeTimes`
+  - [x] Test: `Constructor_WhenInitialized_CollectedIsZero`
+  - [x] Test: `Constructor_WithTotalFive_TotalEqualsFive`
+  - [x] Use NUnit `[Test]` attribute, `Assert.AreEqual`, `Assert.IsTrue`
+  - [x] Instantiate ScoreTracker with `new ScoreTracker(5)` — no MonoBehaviour needed
 
 ## Dev Notes
 
@@ -103,8 +103,38 @@ Assets/
 
 ### Agent Model Used
 
+Claude Opus 4.6
+
 ### Debug Log References
+
+- Unity batch mode test run: 15/15 tests passed (0 failures, 0 skipped)
+- All 6 new ScoreTrackerTests passed on first run
+- All 9 existing SceneSetupBoundaryTests passed (no regressions)
 
 ### Completion Notes List
 
+- Created `ScoreTracker` as a pure C# class with zero Unity dependencies (`using System;` only)
+- Constructor accepts `int totalCount`, stores as read-only `Total` property
+- `Collected` property uses `{ get; private set; }` pattern, starts at 0
+- `AddPoint()` increments `Collected` and invokes `OnScoreChanged?.Invoke(Collected)`
+- All 6 tests follow `MethodName_Condition_ExpectedResult` naming convention
+- Tests use `[TestFixture]` and `[Test]` attributes with NUnit assertions
+- Tests instantiate via `new ScoreTracker(5)` — no MonoBehaviour needed
+
 ### File List
+
+- `Assets/Scripts/Core/ScoreTracker.cs` (NEW)
+- `Assets/Tests/EditMode/ScoreTrackerTests.cs` (NEW)
+
+## Change Log
+
+- 2026-02-15: Implemented ScoreTracker pure C# class and 6 EditMode unit tests covering all acceptance criteria
+- 2026-02-15: Code review (AI) — 6 MEDIUM issues found and auto-fixed:
+  1. Added `CubeCollector.Core` namespace to ScoreTracker.cs
+  2. Added `CubeCollector.Tests` namespace to ScoreTrackerTests.cs
+  3. Added bounds guard in `AddPoint()` to prevent over-collection beyond `Total`
+  4. Added constructor validation throwing `ArgumentOutOfRangeException` for zero/negative `totalCount`
+  5. Added 4 new edge-case tests: zero total, negative total, over-collection no-increment, over-collection no-event
+  6. Migrated all assertions from `Assert.AreEqual` to fluent `Assert.That(actual, Is.EqualTo(expected))` syntax
+  - 3 LOW issues noted but not fixed (event argument value verification, missing `using System`, setup/teardown pattern)
+  - Unity batch mode: 19/19 tests passed (10 ScoreTracker + 9 SceneSetupBoundary), 0 failures
