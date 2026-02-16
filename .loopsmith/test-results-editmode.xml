@@ -1,8 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<test-run id="2" testcasecount="0" result="Passed" total="0" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-02-16 02:11:17Z" end-time="2026-02-16 02:11:17Z" duration="0.0018237">
-  <test-suite type="TestSuite" id="1000" name="Cube Collector" fullname="Cube Collector" runstate="Runnable" testcasecount="0" result="Passed" start-time="2026-02-16 02:11:17Z" end-time="2026-02-16 02:11:17Z" duration="0.001824" total="0" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0">
+<test-run id="2" testcasecount="9" result="Passed" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-02-16 02:21:11Z" end-time="2026-02-16 02:21:11Z" duration="0.0428624">
+  <test-suite type="TestSuite" id="1000" name="Cube Collector" fullname="Cube Collector" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-02-16 02:21:11Z" end-time="2026-02-16 02:21:11Z" duration="0.042862" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
     <properties>
       <property name="platform" value="EditMode" />
     </properties>
+    <test-suite type="Assembly" id="1011" name="EditMode.dll" fullname="/Users/iggykrajci/Code/loopsmith-example-project/Library/ScriptAssemblies/EditMode.dll" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-02-16 02:21:11Z" end-time="2026-02-16 02:21:11Z" duration="0.038643" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="31931" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestFixture" id="1001" name="SceneSetupBoundaryTests" fullname="SceneSetupBoundaryTests" classname="SceneSetupBoundaryTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-02-16 02:21:11Z" end-time="2026-02-16 02:21:11Z" duration="0.037852" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1002" name="CreateBoundaries_WhenCalled_CreatesBoundariesParentWith4Children" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_CreatesBoundariesParentWith4Children" methodname="CreateBoundaries_WhenCalled_CreatesBoundariesParentWith4Children" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="2136445716" result="Passed" start-time="2026-02-16 02:21:11Z" end-time="2026-02-16 02:21:11Z" duration="0.013189" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[SceneSetup] Created boundary wall: BoundaryNorth
+[SceneSetup] Created boundary wall: BoundarySouth
+[SceneSetup] Created boundary wall: BoundaryEast
+[SceneSetup] Created boundary wall: BoundaryWest
+[SceneSetup] Created play area boundaries.
+]]></output>
+        </test-case>
+        <test-case id="1003" name="CreateBoundaries_WhenCalled_CreatesWallsWithCorrectNames" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_CreatesWallsWithCorrectNames" methodname="CreateBoundaries_WhenCalled_CreatesWallsWithCorrectNames" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="1865341158" result="Passed" start-time="2026-02-16 02:21:11Z" end-time="2026-02-16 02:21:11Z" duration="0.001860" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[SceneSetup] Created boundary wall: BoundaryNorth
+[SceneSetup] Created boundary wall: BoundarySouth
+[SceneSetup] Created boundary wall: BoundaryEast
+[SceneSetup] Created boundary wall: BoundaryWest
+[SceneSetup] Created play area boundaries.
+]]></output>
+        </test-case>
+        <test-case id="1009" name="CreateBoundaries_WhenCalled_EastWallPositionedCorrectly" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_EastWallPositionedCorrectly" methodname="CreateBoundaries_WhenCalled_EastWallPositionedCorrectly" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="164890157" result="Passed" start-time="2026-02-16 02:21:11Z" end-time="2026-02-16 02:21:11Z" duration="0.002586" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[SceneSetup] Created boundary wall: BoundaryNorth
+[SceneSetup] Created boundary wall: BoundarySouth
+[SceneSetup] Created boundary wall: BoundaryEast
+[SceneSetup] Created boundary wall: BoundaryWest
+[SceneSetup] Created play area boundaries.
+]]></output>
+        </test-case>
+        <test-case id="1007" name="CreateBoundaries_WhenCalled_NorthWallPositionedCorrectly" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_NorthWallPositionedCorrectly" methodname="CreateBoundaries_WhenCalled_NorthWallPositionedCorrectly" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="678290030" result="Passed" start-time="2026-02-16 02:21:11Z" end-time="2026-02-16 02:21:11Z" duration="0.001874" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[SceneSetup] Created boundary wall: BoundaryNorth
+[SceneSetup] Created boundary wall: BoundarySouth
+[SceneSetup] Created boundary wall: BoundaryEast
+[SceneSetup] Created boundary wall: BoundaryWest
+[SceneSetup] Created play area boundaries.
+]]></output>
+        </test-case>
+        <test-case id="1008" name="CreateBoundaries_WhenCalled_SouthWallPositionedCorrectly" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_SouthWallPositionedCorrectly" methodname="CreateBoundaries_WhenCalled_SouthWallPositionedCorrectly" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="2140239320" result="Passed" start-time="2026-02-16 02:21:11Z" end-time="2026-02-16 02:21:11Z" duration="0.001745" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[SceneSetup] Created boundary wall: BoundaryNorth
+[SceneSetup] Created boundary wall: BoundarySouth
+[SceneSetup] Created boundary wall: BoundaryEast
+[SceneSetup] Created boundary wall: BoundaryWest
+[SceneSetup] Created play area boundaries.
+]]></output>
+        </test-case>
+        <test-case id="1005" name="CreateBoundaries_WhenCalled_WallsAreStatic" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_WallsAreStatic" methodname="CreateBoundaries_WhenCalled_WallsAreStatic" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="410364187" result="Passed" start-time="2026-02-16 02:21:11Z" end-time="2026-02-16 02:21:11Z" duration="0.002009" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[SceneSetup] Created boundary wall: BoundaryNorth
+[SceneSetup] Created boundary wall: BoundarySouth
+[SceneSetup] Created boundary wall: BoundaryEast
+[SceneSetup] Created boundary wall: BoundaryWest
+[SceneSetup] Created play area boundaries.
+]]></output>
+        </test-case>
+        <test-case id="1004" name="CreateBoundaries_WhenCalled_WallsHaveNonTriggerBoxColliders" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_WallsHaveNonTriggerBoxColliders" methodname="CreateBoundaries_WhenCalled_WallsHaveNonTriggerBoxColliders" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="2131126799" result="Passed" start-time="2026-02-16 02:21:11Z" end-time="2026-02-16 02:21:11Z" duration="0.002098" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[SceneSetup] Created boundary wall: BoundaryNorth
+[SceneSetup] Created boundary wall: BoundarySouth
+[SceneSetup] Created boundary wall: BoundaryEast
+[SceneSetup] Created boundary wall: BoundaryWest
+[SceneSetup] Created play area boundaries.
+]]></output>
+        </test-case>
+        <test-case id="1006" name="CreateBoundaries_WhenCalled_WallsHaveNoRendererOrMeshFilter" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_WallsHaveNoRendererOrMeshFilter" methodname="CreateBoundaries_WhenCalled_WallsHaveNoRendererOrMeshFilter" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="1491296432" result="Passed" start-time="2026-02-16 02:21:11Z" end-time="2026-02-16 02:21:11Z" duration="0.001858" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[SceneSetup] Created boundary wall: BoundaryNorth
+[SceneSetup] Created boundary wall: BoundarySouth
+[SceneSetup] Created boundary wall: BoundaryEast
+[SceneSetup] Created boundary wall: BoundaryWest
+[SceneSetup] Created play area boundaries.
+]]></output>
+        </test-case>
+        <test-case id="1010" name="CreateBoundaries_WhenCalled_WestWallPositionedCorrectly" fullname="SceneSetupBoundaryTests.CreateBoundaries_WhenCalled_WestWallPositionedCorrectly" methodname="CreateBoundaries_WhenCalled_WestWallPositionedCorrectly" classname="SceneSetupBoundaryTests" runstate="Runnable" seed="370788555" result="Passed" start-time="2026-02-16 02:21:11Z" end-time="2026-02-16 02:21:11Z" duration="0.001842" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[SceneSetup] Created boundary wall: BoundaryNorth
+[SceneSetup] Created boundary wall: BoundarySouth
+[SceneSetup] Created boundary wall: BoundaryEast
+[SceneSetup] Created boundary wall: BoundaryWest
+[SceneSetup] Created play area boundaries.
+Saving results to: /Users/iggykrajci/Library/Application Support/DefaultCompany/Cube Collector/TestResults.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
   </test-suite>
 </test-run>
